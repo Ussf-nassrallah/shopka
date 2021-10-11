@@ -1,0 +1,27 @@
+.product {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+
+  &__img {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-weight: 400;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: color 300ms ease;
+
+    &:hover {
+      color: #2264d1;
+    }
+  }
+
+  &__price {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    color: #242424;
+    font-weight: bold;
+  }
+}

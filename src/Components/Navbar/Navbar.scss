@@ -1,0 +1,82 @@
+@import "../../helpers/helpers";
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+$ml-1: 1.5rem;
+$mr-1: 1.5rem;
+$mx-1: 1.5rem;
+
+.header {
+  @extend %flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ededf0;
+  background-color: #fff;
+
+  &__logo {
+    &-img {
+      max-width: 165px;
+    }
+  }
+
+  &__links,
+  &__search,
+  &__userOptions {
+    @extend %flex;
+  }
+
+  &__links {
+    li {
+      &:first-child {
+        margin-left: 0.6rem !important;
+      }
+
+      margin-left: $ml-1;
+
+      a {
+        color: #5a5b6a;
+      }
+    }
+  }
+
+  &__search {
+    flex: 1;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    margin: 0 $mx-1;
+    border-radius: 30px;
+    background: #ededf0;
+
+    div {
+      @extend %flex;
+    }
+
+    &-input {
+      border: none;
+      background: none;
+      outline: none;
+      // width: 670px;
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      color: #787885 !important;
+    }
+
+    .searchIcon {
+      margin-right: 0.5rem;
+      color: #9696a0;
+    }
+  }
+
+  &__catygories {
+    color: #2264d1;
+  }
+
+  &__userOptions {
+    .btn {
+      margin-left: $ml-1;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+
+  .sidebar {
+    width: 25% !important;
+  }
+
+  .products {
+    flex: 1;
+  }
+}
