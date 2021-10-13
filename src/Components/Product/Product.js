@@ -3,21 +3,26 @@ import './Product.scss';
 
 function Product({product}) {
     function productRating(num) {
-        for (let index = 0; index <= num; index++){
-            return <span className="product__rating">⭐</span>
+        let stars = [];
+        for (let index = 0; index < num; index++){
+            stars.push(index);
+            stars[index] = "⭐";
         }
+        if (stars.length > 5) {
+            stars.length = 5;
+        }
+        return stars.map((star, ind) => <p key={ind} className="product__rating">{star}</p>)
     }
-
-    console.log(productRating(product.rating))
 
     return (
         <div className="product">
             <div className="product__img">
                 <img src={product.img} alt={product.title} />
             </div>
+            <span className="product__category">{product.category}</span>
             <h3 className="product__title">{product.title}</h3>
             <p className="product__price">${product.price}</p>
-            <div>{productRating(product.rating)}</div>
+            <div className="stars">{productRating(product.rating)}</div>
         </div>
     )
 }

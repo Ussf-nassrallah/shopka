@@ -1,9 +1,33 @@
 .product {
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms ease;
+
+  &:hover {
+    // transform: scale(1.01);
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.13);
+  }
 
   &__img {
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__category {
+    color: #2264d1;
+    text-transform: capitalize;
+    display: inline-block;
+    background-color: rgba($color: #2264d1, $alpha: 0.2);
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -15,6 +39,13 @@
 
     &:hover {
       color: #2264d1;
+    }
+  }
+
+  .stars {
+    display: flex;
+    > * + * {
+      margin-left: 0.1rem;
     }
   }
 

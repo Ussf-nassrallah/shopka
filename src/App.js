@@ -4,6 +4,7 @@ import "./App.scss";
 import Navbar from "./Components/Navbar/Navbar";
 import Products from "./Components/common/Products/Products";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import FilterProducts from "./Components/common/FilterProducts/FilterProducts";
 
 function App() {
     return (
@@ -11,7 +12,10 @@ function App() {
             <Navbar />
             <main className="flex">
                 <Sidebar className="sidebar" />
-                <Products className="products" />
+                <div>
+                    <FilterProducts />
+                    <Products className="products" />
+                </div>
             </main>
         </GlobalProvider>
     );
