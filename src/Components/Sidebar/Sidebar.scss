@@ -1,4 +1,62 @@
+@import "../../helpers/helpers";
+
 .sidebar {
-  width: 35%;
-  display: none;
+  margin-right: 2rem;
+  padding-right: 1rem;
+  border-right: 1px solid #ededf0;
+
+  &__btn {
+    border: 1px solid #2264d1;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 98%;
+
+    margin-bottom: 2rem;
+
+    .icon {
+      position: absolute;
+      left: 0.6rem;
+    }
+  }
+
+  ul {
+    .sc {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-bottom: 0.8rem;
+
+      .arrowIcon {
+        color: #2264d1;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 0;
+      }
+
+      .subCategory {
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+
+        &__item {
+          color: gray;
+          padding-bottom: 0.7rem;
+
+          &:first-child {
+            padding-top: 0.5rem;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }

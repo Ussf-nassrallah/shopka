@@ -1,16 +1,21 @@
 import React from 'react'
 import './Product.scss';
 
-function Product({product}) {
+function Product({ product }) {
     function productRating(num) {
         let stars = [];
+
         for (let index = 0; index < num; index++){
             stars.push(index);
             stars[index] = "⭐";
         }
+
         if (stars.length > 5) {
             stars.length = 5;
+        } else if(stars.length < 0) {
+            stars.length = 0;
         }
+
         return stars.map((star, ind) => <p key={ind} className="product__rating">{star}</p>)
     }
 

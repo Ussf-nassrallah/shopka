@@ -10,11 +10,13 @@ $mr-1: 1.5rem;
 $mx-1: 1.5rem;
 
 .header {
-  @extend %flex;
-  justify-content: space-between;
-  padding: 0 1rem;
   border-bottom: 1px solid #ededf0;
   background-color: #fff;
+
+  .container {
+    @extend %flex;
+    justify-content: space-between;
+  }
 
   &__logo {
     &-img {
@@ -77,6 +79,68 @@ $mx-1: 1.5rem;
   &__userOptions {
     .btn {
       margin-left: $ml-1;
+    }
+  }
+}
+
+// navbar for mobile
+.nav {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__toggle {
+    &-btn {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__logo {
+    &-img {
+      display: block;
+      width: 160px;
+    }
+  }
+
+  ul {
+    display: flex;
+    font-size: 1.8rem;
+    opacity: 0.7;
+
+    > * + * {
+      margin-left: 0.7rem;
+    }
+  }
+
+  .header__search {
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    right: 1rem;
+    border-radius: 8px;
+
+    div {
+      width: 100%;
+    }
+
+    &-input {
+      width: 88%;
+    }
+
+    .searchIcon,
+    .closeIcon {
+      font-size: 1.2rem;
+      color: #9696a0;
     }
   }
 }

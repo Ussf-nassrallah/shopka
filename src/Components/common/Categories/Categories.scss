@@ -1,0 +1,31 @@
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  color: #787885;
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+
+    &__icon {
+      margin-bottom: 0.7rem;
+    }
+
+    &:first-child {
+      color: #2979ff;
+      background: #ebf2ff;
+    }
+  }
+
+  // & > * + * {
+  //   margin-left: .5rem;
+  // }
+}
