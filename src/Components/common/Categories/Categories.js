@@ -7,7 +7,7 @@ const Catygories = () => {
     const { categories } = useContext(GlobalContext);
 
     return (
-        <div className="container">
+        <div className="container hide-for-mobile">
             <div className="categories">
                 {
                     categories.map(category => <Category

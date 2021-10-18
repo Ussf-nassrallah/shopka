@@ -169,7 +169,10 @@ export const GlobalContext = createContext(initialState);
 // provider Component
 export const GlobalProvider = ({ children }) => {
   return (
-    <GlobalContext.Provider value={{ products: initialState.products, categories: initialState.categories }}>
+    <GlobalContext.Provider value={{
+      products: initialState.products,
+      categories: initialState.categories
+    }}>
       {children}
     </GlobalContext.Provider>
   );

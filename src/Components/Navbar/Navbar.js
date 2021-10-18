@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 import "./Navbar.scss";
 import "../../utilities/utilities.scss";
 
-export default function Navbar() {
+export default function Navbar({ sidebar, setSidebar }) {
     return (
         <>
             <nav className="header hide-for-mobile">
@@ -43,7 +43,7 @@ export default function Navbar() {
 
             <nav className="nav hide-for-desktop">
                 <div className="nav-left">
-                    <div className="nav__toggle">
+                    <div className="nav__toggle" onClick={() => setSidebar(!sidebar)}>
                         <FaBars className="nav__toggle-btn" />
                     </div>
 

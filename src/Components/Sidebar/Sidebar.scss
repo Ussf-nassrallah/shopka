@@ -5,6 +5,45 @@
   padding-right: 1rem;
   border-right: 1px solid #ededf0;
 
+  @include breakpoint-down(medium) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80% !important;
+    height: 100%;
+    background: #fff;
+    z-index: 100;
+    margin: 0;
+    padding: 2rem 0;
+    overflow-y: scroll;
+  }
+
+  .closeIcon {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    z-index: 100;
+  }
+
+  // &::before {
+  //   content: "";
+  //   width: 20%;
+  //   height: 100%;
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   background-color: rgba(0, 0, 0, 0.7);
+  //   z-index: 100;
+  // }
+
+  &__menu {
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+  }
+
   &__btn {
     border: 1px solid #2264d1;
     background: #fff;
@@ -14,8 +53,20 @@
     text-align: center;
     position: relative;
     width: 98%;
-
     margin-bottom: 2rem;
+    cursor: pointer;
+
+    @include breakpoint-down(medium) {
+      margin: auto;
+      width: 90%;
+      margin-bottom: 2rem;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint-down(small) {
+      font-size: 0.9rem;
+    }
 
     .icon {
       position: absolute;
@@ -30,14 +81,47 @@
       position: relative;
       flex-direction: column;
       align-items: flex-start;
-
       margin-bottom: 0.8rem;
+      cursor: pointer;
+      transition: background-color 300ms ease-in-out;
+
+      @include breakpoint-down(medium) {
+        font-size: 1.3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        margin: 0;
+      }
+
+      @include breakpoint-down(small) {
+        font-size: 1rem;
+        padding-right: 2rem;
+      }
+
+      &:hover {
+        @include breakpoint-down(medium) {
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+      }
+
+      &:first-child {
+        @include breakpoint-down(medium) {
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+      }
 
       .arrowIcon {
         color: #2264d1;
         font-size: 1.5rem;
         position: absolute;
         right: 0;
+
+        @include breakpoint-down(medium) {
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        @include breakpoint-down(small) {
+          right: 0.7rem;
+        }
       }
 
       .subCategory {
@@ -57,6 +141,18 @@
           }
         }
       }
+    }
+  }
+
+  transition: transform 500ms ease-in-out;
+
+  &.open {
+    display: block;
+  }
+
+  &.close {
+    @include breakpoint-down(medium) {
+      transform: translateX(-100%);
     }
   }
 }

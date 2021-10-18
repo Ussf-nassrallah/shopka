@@ -20,7 +20,6 @@ const SidebarCategory = ({ name, subCategory }) => {
     }
   }
 
-
   return (
     <li className="sc" onClick={toggleCategory} >
       <p className="sc__name">
