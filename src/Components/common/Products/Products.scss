@@ -2,4 +2,5 @@
 
 .products {
   @include grid(3, 1rem);
+  margin-top: 1rem !important;
 }

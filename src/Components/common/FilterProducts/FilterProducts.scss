@@ -1,3 +1,21 @@
-.slc-dropdown {
-  margin-top: 5rem;
+@import "../../../helpers/helpers";
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+
+  @include breakpoint-up(medium) {
+    justify-content: initial;
+  }
+
+  > * + * {
+    margin-left: 0.5rem;
+
+    @include breakpoint-up(medium) {
+      margin-left: 1rem;
+    }
+  }
 }

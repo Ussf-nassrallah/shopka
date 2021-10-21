@@ -1,0 +1,15 @@
+@import "../../../helpers/helpers";
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+
+  > * + * {
+    margin-left: 0.1rem;
+
+    @include breakpoint-up(medium) {
+      margin-left: 1rem;
+    }
+  }
+}

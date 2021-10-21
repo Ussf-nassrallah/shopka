@@ -1,3 +1,5 @@
+@import "../../../helpers/helpers";
+
 .categories {
   display: flex;
   justify-content: space-between;
@@ -5,6 +7,24 @@
   margin: 1rem 0;
   font-size: 0.8rem;
   color: #787885;
+
+  // display: grid;
+  // grid-template-columns: repeat(10, 1fr);
+  // gap: 5px;
+  // font-size: 0.8rem;
+  // color: #787885;
+  // margin: 1rem 0;
+  // width: 200%;
+
+  @include breakpoint-down(medium) {
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    place-items: center;
+    margin-top: 4.5rem;
+    font-size: 0.8rem;
+    width: 200%;
+  }
 
   .category {
     display: flex;
@@ -15,6 +35,12 @@
     border-radius: 6px;
     padding: 0.5rem;
 
+    @include breakpoint-down(medium) {
+      width: 120px;
+      height: 70px;
+      position: relative;
+    }
+
     &__icon {
       margin-bottom: 0.7rem;
     }
@@ -24,8 +50,4 @@
       background: #ebf2ff;
     }
   }
-
-  // & > * + * {
-  //   margin-left: .5rem;
-  // }
 }

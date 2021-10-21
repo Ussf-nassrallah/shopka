@@ -11,10 +11,15 @@
   @include breakpoint-down(medium) {
     padding-left: 0;
     padding-right: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
   }
 
   &:hover {
-    // transform: scale(1.01);
     -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
   }
@@ -22,9 +27,28 @@
   &__img {
     margin-bottom: 1rem;
 
+    @include breakpoint-down(medium) {
+      margin-bottom: 0;
+      width: 400px;
+      margin-left: 0.7rem;
+    }
+
+    @include breakpoint-down(small) {
+      margin-bottom: 0.5rem;
+      width: 200px;
+      margin-left: 0;
+    }
+
     img {
       width: 100%;
       display: block;
+    }
+  }
+
+  &-info {
+    @include breakpoint-down(small) {
+      font-size: 14px;
+      padding: 1rem;
     }
   }
 
@@ -37,6 +61,11 @@
     padding: 0.3rem 1rem;
     border-radius: 2rem;
     margin-bottom: 1rem;
+
+    @include breakpoint-down(small) {
+      margin-bottom: 0.5rem;
+      font-size: 14px !important;
+    }
   }
 
   &__title {
@@ -47,6 +76,11 @@
 
     &:hover {
       color: #2264d1;
+    }
+
+    @include breakpoint-down(small) {
+      line-height: 1.6;
+      font-size: 14px;
     }
   }
 
@@ -62,5 +96,10 @@
     font-size: 1.4rem;
     color: #242424;
     font-weight: bold;
+
+    @include breakpoint-down(small) {
+      margin: 0.2rem 0;
+      font-size: 1.1rem;
+    }
   }
 }

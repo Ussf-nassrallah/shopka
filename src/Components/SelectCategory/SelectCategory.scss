@@ -1,0 +1,42 @@
+@import "../../helpers/helpers";
+
+select.btn {
+  border-radius: 6px;
+  text-transform: capitalize;
+  border: 1px solid #787885;
+  background-color: #fff;
+  font-size: 0.9rem;
+  color: #787885;
+}
+
+.slc-dropdown {
+  display: inline;
+  position: relative;
+
+  select {
+    padding: 8px 24px 8px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:active,
+    &:focus {
+      outline: 2px solid rgba($primary-clr, 0.6);
+      border: 1px solid rgba($primary-clr, 0.3) !important;
+      box-shadow: none;
+    }
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+}
