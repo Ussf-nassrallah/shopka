@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalProvider, GlobalContext } from "./context/GlobalState";
+
+// Styles
 import "./App.scss";
+
+// Components
 import Navbar from "./Components/Navbar/Navbar";
 import Products from "./Components/common/Products/Products";
 import Sidebar from "./Components/Sidebar/Sidebar";

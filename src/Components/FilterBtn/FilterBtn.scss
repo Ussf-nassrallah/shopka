@@ -1,17 +1,23 @@
 @import "../../helpers/helpers";
 
 .filter-btn {
-  all: unset;
-  display: block;
-  color: #787885;
-  border-radius: 30px;
-  background: #ededf0;
-  padding: 0.5rem 1rem;
+    all: unset;
+    display: block;
+    color: #787885;
+    border-radius: 30px;
+    background: #ededf0;
+    padding: 0.5rem 1rem;
 
-  @include breakpoint-down(small) {
-    font-size: 0.9rem;
-    padding: 0.4rem 1rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
+    @include breakpoint-down(small) {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &.active {
+        background-color: #fff;
+        border: 1px solid $primary-clr;
+        color: $primary-clr;
+    }
 }

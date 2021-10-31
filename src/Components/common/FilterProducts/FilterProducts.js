@@ -1,8 +1,12 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
+
+// styles
+import "./FilterProducts.scss";
+
+// components
 import SelectCategory from "../../SelectCategory/SelectCategory";
 import FilterButtons from "../FilterButtons/FilterButtons";
-import "./FilterProducts.scss";
 
 export default function FilterProducts({ select, setSelect }) {
     const { products } = useContext(GlobalContext);

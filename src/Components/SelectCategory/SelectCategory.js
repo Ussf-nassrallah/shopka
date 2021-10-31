@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./SelectCategory.scss";
 
 function SelectCategory({ options, select, setSelect }) {
