@@ -1,6 +1,10 @@
 @import "../../../helpers/helpers";
 
 .products {
-  @include grid(3, 1rem);
-  margin-top: 1rem !important;
+    @include grid(3, 1rem);
+    margin-top: 1rem !important;
+
+    @include breakpoint-up(medium) {
+        margin: 2rem 0;
+    }
 }
