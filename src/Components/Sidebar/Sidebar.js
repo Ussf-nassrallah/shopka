@@ -7,9 +7,17 @@ import "./Sidebar.scss";
 
 const Sidebar = ({ sidebar, setSidebar }) => {
     const { categories } = useContext(GlobalContext);
+    const [fixed, setFixed] = useState(false);
+
+    const fixedSidebar = () =>
+        window.scrollY >= 90 ? setFixed(true) : setFixed(false);
+    window.addEventListener("scroll", fixedSidebar);
+
+    let closeSidebar = sidebar ? "close" : "";
+    let fixSidebar = fixed ? "fixed" : "";
 
     return (
-        <div className={sidebar ? "sidebar close" : "sidebar"}>
+        <div className={`sidebar ${closeSidebar} ${fixSidebar}`}>
             <button className="sidebar__btn btn btn-secondary">
                 <RiBarChartHorizontalFill className="icon" />
                 departments

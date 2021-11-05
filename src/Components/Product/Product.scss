@@ -1,105 +1,112 @@
 @import "../../helpers/helpers";
 
 .product {
-  background-color: #fff;
-  padding: 1.2rem;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.13);
-  cursor: pointer;
-  transition: all 500ms ease;
-
-  @include breakpoint-down(medium) {
-    padding-left: 0;
-    padding-right: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  @include breakpoint-down(small) {
-    flex-direction: column;
-  }
-
-  &:hover {
-    -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
-  }
-
-  &__img {
-    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+    transition: all 500ms ease;
 
     @include breakpoint-down(medium) {
-      margin-bottom: 0;
-      width: 400px;
-      margin-left: 0.7rem;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        align-items: center;
     }
 
     @include breakpoint-down(small) {
-      margin-bottom: 0.5rem;
-      width: 200px;
-      margin-left: 0;
+        flex-direction: column;
     }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-  }
-
-  &-info {
-    @include breakpoint-down(small) {
-      font-size: 14px;
-      padding: 1rem;
-    }
-  }
-
-  &__category {
-    color: #2264d1;
-    text-transform: capitalize;
-    display: inline-block;
-    background-color: rgba($color: #2264d1, $alpha: 0.2);
-    font-weight: 500;
-    padding: 0.3rem 1rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
-
-    @include breakpoint-down(small) {
-      margin-bottom: 0.5rem;
-      font-size: 14px !important;
-    }
-  }
-
-  &__title {
-    font-weight: 400;
-    opacity: 0.9;
-    cursor: pointer;
-    transition: color 300ms ease;
 
     &:hover {
-      color: #2264d1;
+        -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
     }
 
-    @include breakpoint-down(small) {
-      line-height: 1.6;
-      font-size: 14px;
-    }
-  }
+    &__img {
+        margin-bottom: 1rem;
 
-  .stars {
-    display: flex;
-    > * + * {
-      margin-left: 0.1rem;
-    }
-  }
+        @include breakpoint-down(medium) {
+            margin-bottom: 0;
+            width: 400px;
+            margin-left: 0.7rem;
+        }
 
-  &__price {
-    margin: 0.5rem 0;
-    font-size: 1.4rem;
-    color: #242424;
-    font-weight: bold;
+        @include breakpoint-down(small) {
+            margin-bottom: 0.5rem;
+            width: 200px;
+            margin-left: 0;
+        }
 
-    @include breakpoint-down(small) {
-      margin: 0.2rem 0;
-      font-size: 1.1rem;
+        img {
+            width: 100%;
+            display: block;
+        }
     }
-  }
+
+    &-info {
+        @include breakpoint-down(small) {
+            font-size: 14px;
+            padding: 1rem;
+            margin-left: 0 !important;
+            padding-right: 1rem !important;
+        }
+
+        @include breakpoint-down(medium) {
+            margin-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    &__category {
+        color: #2264d1;
+        text-transform: capitalize;
+        display: inline-block;
+        background-color: rgba($color: #2264d1, $alpha: 0.2);
+        font-weight: 500;
+        padding: 0.3rem 1rem;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint-down(small) {
+            margin-bottom: 0.5rem;
+            font-size: 14px !important;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: color 300ms ease;
+
+        &:hover {
+            color: #2264d1;
+        }
+
+        @include breakpoint-down(small) {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+    }
+
+    .stars {
+        display: flex;
+        > * + * {
+            margin-left: 0.1rem;
+        }
+    }
+
+    &__price {
+        margin: 0.5rem 0;
+        font-size: 1.4rem;
+        color: #242424;
+        font-weight: bold;
+
+        @include breakpoint-down(small) {
+            margin: 0.2rem 0;
+            font-size: 1.1rem;
+        }
+    }
 }
