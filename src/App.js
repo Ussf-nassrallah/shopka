@@ -9,14 +9,18 @@ import Navbar from "./Components/Navbar/Navbar";
 import Products from "./Components/common/Products/Products";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import FilterProducts from "./Components/common/FilterProducts/FilterProducts";
+import FilterButtons from "./Components/common/FilterButtons/FilterButtons";
 import Catygories from "./Components/common/Categories/Categories";
+import OptionsList from "./Components/OptionsList/OptionsList";
 
 function App() {
-    const [sidebar, setSidebar] = useState(true);
     const { products } = useContext(GlobalContext);
+    const [sidebar, setSidebar] = useState(true);
     const [select, setSelect] = useState("all");
     let [list, setList] = useState([]);
+    const [value, setValue] = useState(false);
 
+    // filter products
     const filterItems = (category) =>
         products.filter((product) => product.category === category);
 
@@ -43,13 +47,20 @@ function App() {
                             select={select}
                             setSelect={setSelect}
                         />
+
+                        <div className="flex">
+                            <FilterButtons />
+                            <OptionsList value={value} setValue={setValue} />
+                        </div>
+
                         <Products
-                            className="products"
                             list={list}
                             setList={setList}
                             select={select}
                             setSelect={setSelect}
                             filterItems={filterItems}
+                            value={value}
+                            setValue={setValue}
                         />
                     </div>
                 </div>

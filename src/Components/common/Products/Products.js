@@ -3,7 +3,15 @@ import { GlobalContext } from "../../../context/GlobalState";
 import Product from "../../Product/Product";
 import "./Products.scss";
 
-function Products({ list, setList, select, setSelect, filterItems }) {
+function Products({
+    list,
+    setList,
+    select,
+    setSelect,
+    filterItems,
+    value,
+    setValue,
+}) {
     const { products } = useContext(GlobalContext);
 
     useEffect(() => {
@@ -13,7 +21,7 @@ function Products({ list, setList, select, setSelect, filterItems }) {
     }, [select]);
 
     return (
-        <section className="products">
+        <section className={value ? "products col-1" : "products"}>
             {list.map((product) => (
                 <Product key={product.id} product={product} />
             ))}

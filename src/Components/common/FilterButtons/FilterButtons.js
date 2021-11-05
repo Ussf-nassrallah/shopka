@@ -18,8 +18,6 @@ function FilterButtons() {
         setToggleState(index);
     };
 
-    console.log(toggleState);
-
     return (
         <div className="btns">
             {buttons.map((button, index) => (

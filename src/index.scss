@@ -3,28 +3,28 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: #fcfcfc;
-  font-size: 1rem !important;
-  font-family: "Roboto", sans-serif;
+    background: #fcfcfc;
+    font-size: 0.9rem !important;
+    font-family: "Roboto", sans-serif;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1em;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1em;
 }

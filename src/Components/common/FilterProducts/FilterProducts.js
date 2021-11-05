@@ -6,7 +6,6 @@ import "./FilterProducts.scss";
 
 // components
 import SelectCategory from "../../SelectCategory/SelectCategory";
-import FilterButtons from "../FilterButtons/FilterButtons";
 
 export default function FilterProducts({ select, setSelect }) {
     const { products } = useContext(GlobalContext);
@@ -50,8 +49,6 @@ export default function FilterProducts({ select, setSelect }) {
                     />
                 </div>
             </div>
-
-            <FilterButtons />
         </>
     );
 }

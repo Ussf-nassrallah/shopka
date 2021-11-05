@@ -1,15 +1,18 @@
 @import "../../../helpers/helpers";
 
 .btns {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
 
-  > * + * {
-    margin-left: 0.1rem;
-
-    @include breakpoint-up(medium) {
-      margin-left: 1rem;
+    > * + * {
+        margin-left: 0.1rem;
     }
-  }
+
+    button {
+        @include breakpoint-up(medium) {
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
 }

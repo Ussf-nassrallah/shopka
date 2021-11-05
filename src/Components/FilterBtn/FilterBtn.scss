@@ -7,6 +7,7 @@
     border-radius: 30px;
     background: #ededf0;
     padding: 0.5rem 1rem;
+    cursor: pointer;
 
     @include breakpoint-down(small) {
         font-size: 0.9rem;

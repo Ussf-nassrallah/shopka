@@ -1,35 +1,47 @@
 @import "./helpers/helpers";
 
 .flex {
-  .container {
-    display: flex;
+    .container {
+        display: flex;
 
-    .sidebar {
-      width: 18%;
+        .sidebar {
+            width: 18%;
+        }
+
+        .right-side {
+            width: 82%;
+
+            @include breakpoint-down(medium) {
+                width: 100%;
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .btns {
+                    @include breakpoint-up(medium) {
+                        width: 70%;
+                    }
+                }
+            }
+        }
     }
-
-    .right-side {
-      width: 82%;
-
-      @include breakpoint-down(medium) {
-        width: 100%;
-      }
-    }
-  }
 }
 
 .sidebar__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 99;
-  transition: all 500ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    transition: all 500ms ease-in-out;
 }
 
 .hide-overlay {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }

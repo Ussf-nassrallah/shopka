@@ -7,4 +7,17 @@
     @include breakpoint-up(medium) {
         margin: 2rem 0;
     }
+
+    &.col-1 {
+        grid-template-columns: repeat(1, 1fr) !important;
+
+        .product {
+            display: flex;
+            align-items: center;
+
+            &-info {
+                margin-left: 3rem;
+            }
+        }
+    }
 }
